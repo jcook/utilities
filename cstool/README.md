@@ -16,6 +16,19 @@ CSTOOL - CHECKING house ownership certificate STATUS TOOL
 
   将查询编号 **201612345678** 之前的 **10** 个编号即：**201612345668** 到 **201612345678** 的状态。
 
+  **Windows 用户**
+
+  打包的cstool.exe在 release 目录中，可以下载并解压，在命令行中使用即可：
+
+      cstool.exe -i 201612345678 -f 10
+
+## 打包
+
+    $cxfreeze cstool.py --target-dir dist-$version
+    $zip -r dist-$version.zip dist-$version
+    $md5sum dist-$version.zip > MD5.txt
+
+
 ## 交流
 
 目前仅满足自己的正常使用，并没有很多容错。
